@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout-wrapper {
+  @apply bg-white p-5 rounded-xl;
+}
+
+.layout-wrapper-2 {
+  padding: 20px;
+  background-color: red;
+  @apply rounded-xl;
+}
