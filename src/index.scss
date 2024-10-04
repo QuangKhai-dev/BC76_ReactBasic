@@ -11,3 +11,16 @@
   background-color: red;
   @apply rounded-xl;
 }
+
+.my-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* img {
+  @apply h-24;
+}
+
+p {
+  font-size: 20px;
+} */
