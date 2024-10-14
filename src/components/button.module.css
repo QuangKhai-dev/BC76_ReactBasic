@@ -1,0 +1,11 @@
+.btn_dark {
+  padding: 10px 25px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+
+.btn_dark:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
