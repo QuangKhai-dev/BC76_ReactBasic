@@ -48,6 +48,26 @@ export default function Header() {
                   List Movie
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? `my-active nav-link` : `nav-link`
+                  }
+                  to="/demo-redux"
+                >
+                  Demo Redux
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? `my-active nav-link` : `nav-link`
+                  }
+                  to="/demo-form"
+                >
+                  Demo Form
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

@@ -2,17 +2,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function ListMovie() {
+export default function ListMovie(props) {
   // một state dùng để quản lí dữ liệu từ BE
   // useEffect dùng để xử lí gọi API
   const [listMovie, setListMovie] = useState([]) // mảng (array)
   const navigate = useNavigate()
-  console.log("Tôi là component ListMovie")
-  console.log(listMovie)
+  console.log(props)
   // Thực thi sau khi giao diện component hiển thị trên trang web
   // UseEffect này đang chạy quá trình quá trình mounting và ở đây là trạng thái của component didmount
   useEffect(() => {
-    console.log("Tôi là useEffect nè")
     axios({
       method: "GET",
       url: "https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01",
@@ -20,8 +18,12 @@ export default function ListMovie() {
         "TokenCyberSoft": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCA3NiIsIkhldEhhblN0cmluZyI6IjIyLzA0LzIwMjYiLCJIZXRIYW5UaW1lIjoiMTc0NTI4MDAwMDAwMCIsIm5iZiI6MTcxNzA4ODQwMCwiZXhwIjoxNzQ1NDI3NjAwfQ.Iie9ShKU1rDaiIMI3GWj3tVS2uHXQmVigj41m9N7KbQ"
       }
     }).then((res) => {
-      console.log(res)
-      setListMovie(res.data.content)
+      // console.log(isNaN(props.started) && isNaN(props.ended)) // ?
+      // const dataMovie = isNaN(props.started) && isNaN(props.ended) ? res.data.content.slice(props.started, props.ended) : res.data.content
+      const dataMovie = res.data.content.slice(props.started, props.ended)
+      console.log(dataMovie)
+
+      setListMovie(dataMovie)
 
     }).catch((err) => {
       console.log(err)

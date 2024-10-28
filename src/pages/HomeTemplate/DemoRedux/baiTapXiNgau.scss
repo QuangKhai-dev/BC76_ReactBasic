@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Pony";
+  src: url('./../../../assets/font/Pony.ttf');
+}
+
+.bai-tap-xi-ngau {
+  background-image: url('./../../../assets/bgGame.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 50px;
+  height: 100vh;
+  font-family: "Pony";
+  padding: 50px;
+
+  h2 {
+    font-size: 60px;
+    text-align: center;
+  }
+}

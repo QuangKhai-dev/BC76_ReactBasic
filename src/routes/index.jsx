@@ -9,6 +9,8 @@ import Dashboard from "../pages/AdminTemplate/Dashboard";
 import AddUser from "../pages/AdminTemplate/AddUser";
 import Contact from "../pages/HomeTemplate/Contact";
 import PageNotFound from "../pages/PageNotFound";
+import DemoRedux from "../pages/HomeTemplate/DemoRedux/DemoRedux";
+import DemoForm from "../pages/HomeTemplate/DemoForm/DemoForm";
 
 const routes = [
   {
@@ -34,6 +36,14 @@ const routes = [
       {
         path: "contact",
         element: Contact,
+      },
+      {
+        path: "demo-redux",
+        element: DemoRedux,
+      },
+      {
+        path: "demo-form",
+        element: DemoForm,
       },
     ],
   },
